@@ -21,19 +21,19 @@ var Rocket = /** @class */ (function () {
     };
     Rocket.prototype.canAdd = function (item) {
         if (this.currentMassKg() + item.massKg <= this.totalCapacityKg) {
-            return true;
+            return;
         }
     };
     Rocket.prototype.addCargo = function (cargo) {
         if (this.canAdd(cargo)) {
             this.cargoItems.push(cargo);
-            return true;
+            return;
         }
     };
     Rocket.prototype.addAstronaut = function (astronaut) {
         if (this.canAdd(astronaut)) {
             this.astronauts.push(astronaut);
-            return true;
+            return;
         }
     };
     return Rocket;
